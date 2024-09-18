@@ -1,0 +1,651 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Istok Web", sans-serif;
+    font-weight: bolder;
+}
+
+/*  heder */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 45px;
+    padding-right: 45px;
+    font-size: 22px;
+
+}
+
+/*  heder  navBar*/
+ul {
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+
+
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    color: aliceblue;
+    position: relative;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d8bf34;
+    transform: scaleX(0);
+    transition: all 0.7s;
+    transform-origin: left;
+}
+
+ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d8bf34;
+    transform: scaleX(0);
+    transition: all 0.7s;
+    transform-origin: right;
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/*background image*/
+.Home {
+    background-image: url(/images/v856-kul-07.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+
+}
+
+/*container*/
+.container {
+    width: 1200px;
+    margin: auto;
+    height: 650px;
+
+
+}
+
+.logo {
+    margin-top: 25px;
+    color: #FEDB0C;;
+    font-size: 24px;
+   
+
+}
+
+.span_logo {
+    color: #f5f4f0;
+}
+
+.center {
+    margin-top: 17%;
+ 
+}
+
+.name {
+    font-size: 67px;
+    color: aliceblue;
+}
+
+.hello {
+    font-size: 36px;
+    color: aliceblue;
+
+}
+
+.front_h3 {
+    font-size: 36px;
+    color: aliceblue;
+
+}
+
+.front {
+    color: #FEDB0C;
+}
+
+/*button*/
+.CV {
+    border: 1px solid #FEDB0C;
+    background-image: none;
+    background: transparent;
+    float: left;
+    background-color: transparent;
+    width: 220px;
+    height: 50px;
+    border-radius: 15px;
+    color: #FEDB0C;
+    font-size: 16px;
+    margin-top: 25px;
+    font-weight: 600;
+
+}
+
+.CV:hover {
+    background-color: #d8bf34;
+    color: aliceblue;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.container_box {
+
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.box {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    /* border: 1px solid #003298; */
+    animation: boxes 12s ease-in infinite;
+    transform: scale(0);
+}
+
+.box:nth-child(2) {
+    top: 20%;
+    left: 25%;
+    background-color: #fffcfc;
+    animation-delay: 2s;
+}
+
+.box:nth-child(3) {
+    top: 50%;
+    left: 75%;
+    background-color: #d8bf34;
+    animation-delay: 3s;
+}
+
+.box:nth-child(4) {
+    top: 75%;
+    left: 70%;
+    width: 0;
+    height: 0;
+    animation-delay: 4s;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #a8c0d8;
+}
+
+.box:nth-child(5) {
+    top: 50%;
+    left: 40%;
+    width: 0;
+    height: 0;
+    animation-delay: 5s;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #d8bf34;
+}
+
+.box:nth-child(6) {
+    top: 25%;
+    left: 95%;
+    background-color: #fffcfc;
+    animation-delay: 5s;
+}
+
+.box:nth-child(7) {
+    top: 85%;
+    left: 25%;
+    background-color: #d8bf34;
+    animation-delay: 6s;
+}
+
+@keyframes boxes {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(7)rotate(560deg);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(3)rotate(560deg);
+        opacity: 0;
+    }
+}
+
+/* section About me*/
+
+.about {
+    position: relative;
+    font-size: 3.7em;
+    color: #d8bf34;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+
+}
+
+.about:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: white;
+    animation: fading 7s linear infinite;
+}
+
+@keyframes fading {
+    0% {
+        left: -20%;
+    }
+
+    50% {
+        left: 120%;
+    }
+
+    100% {
+        left: -20%;
+    }
+}
+
+.container_about {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 350px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #475461;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.card:hover::before {
+    transform: rotate(20deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover::after {
+    transform: rotate(10deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imgbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background-color: #222;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.card:hover .imgbox {
+    bottom: 80px;
+}
+
+.details {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    height: 60px;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #d8bf34;
+    text-transform: uppercase;
+}
+
+h2 span {
+    font-weight: 700;
+    font-size: 16px;
+    color: #475461;
+}
+
+.info h1 {
+    color: #165592;
+    font-weight: 900;
+}
+
+.imgbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    width: 350px;
+    color: #165592;
+    font-weight: 900;
+}
+
+/*Projects section*/
+/*background image*/
+
+.Projects {
+    background-image: url(/images/v856-kul-07.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+
+}
+
+/*container Projects*/
+
+.Projects h1 {
+    font-size: 70px;
+    text-align: center;
+    color: #d8bf34;
+    padding-top: 50px;
+
+
+}  
+.imgbox_card span{
+    display: block;
+  font-size: 20px;
+  font-family:'Popping';
+  bottom: 25%;
+  color:#165592;
+ align-self: center;
+ text-align: center;
+}    
+
+.Projects_box {
+    display: flex;
+   justify-content: space-between;
+   margin-top:150px ;
+
+}
+
+.Projects_card {
+    position: relative;
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    padding: 20px 40px;
+    margin-right: 15px;
+
+}
+
+.imgbox_card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-60px);
+    z-index: 1;
+
+}
+
+.imgbox_card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.Projects_card:hover {
+    height: 380px;
+
+}
+
+.content_card {
+    padding: 20px 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #94800e;
+    font-size: larger;
+    transition: 0.3;
+    transform: translateY(-60px);
+    opacity: 0;
+}
+
+.Projects_card:hover .content_card {
+    opacity: 1;
+    transform: translateY(-200px);
+}
+
+/* Skills */
+
+.Skills_box{
+    display: flex;
+    justify-content: space-between;
+}
+.Skills h1{
+        font-size: 70px;
+        text-align: center;
+        color: #d8bf34;
+        padding-top: 50px;
+}
+.Skills_box1{
+    width: 550px;
+}
+.Skills_box2{
+    width: 550px;
+}
+.skills_button {
+    border: 2px solid  #d8bf34 ;
+    background-image: none;
+    background: transparent;
+    float: left;
+    background-color: transparent;
+    width: 220px;
+    height: 50px;
+    border-radius: 15px;
+    color: #475461;
+    font-size: 16px;
+    margin-top: 25px;
+    font-weight: 600;
+
+}
+
+.skills_button:hover {
+    background-color: #d8bf34;
+    color: aliceblue;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.skill {
+	margin-top: 30px;
+	font-size: 17px;
+}
+
+.skill span {
+	float: left;
+}
+
+.skill div {
+	width: 50%;
+	float: left;
+	margin-top: 5px;
+	background: #e7e7e7;
+	border-radius: 10px;
+}
+
+.skill div span {
+	background: #ffbf35;
+	height: 5px;
+	float: left;
+}
+
+/*Contacts*/
+
+.Contacts {
+    background-image: url(/images/v856-kul-07.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    height: 900px;
+
+}
+.Contacts h1{
+    font-size: 70px;
+    text-align: center;
+    color: #d8bf34;
+    padding-top: 50px;
+}
+.contact form {
+	width: 66%;
+	margin: 0px auto;
+}
+.contact input,
+textarea {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #a1a1a1;
+}
+.contact textarea {
+	height: 80px;
+}
+.contact button {
+	width: 815px;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	background: #ffbf35;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+}
+.contact h3 {
+	font-size: 26px;
+	text-align: center;
+	margin-top: 60px;
+	color: #ffbf35;
+}
+.contact h4 {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 11px;
+}
+.contact p {
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+}
+.icon{
+   color: #000;
+}
+
+
+
+/* Footer */
+
+
+.container {
+    width: 1200px;
+    margin: auto;
+    height: 650px;
+
+
+}
+
+.section_loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #010f1f;
+  }
+  
+  .loader {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    float:right;
+    bottom: 100px;
+    left: -100px;
+  }
+  
+  .loader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: blue; */
+    transform: rotate(calc(18deg * var(--i)));
+  }
+  
+  .loader span:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background:  #d8bf34;
+    box-shadow: 0 0 10px  #d8bf34, 0 0 20px  #d8bf34, 0 0 40px #d8bf34,
+      0 0 60px  #d8bf34, 0 0 80px  #d8bf34, 0 0 100px  #d8bf34;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: scale(1);
+    }
+    80%,
+    100% {
+      transform: scale(0);
+    }
+  }
+  
