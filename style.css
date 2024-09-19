@@ -75,7 +75,7 @@ ul li a:hover::after {
 
 /*background image*/
 .Home {
-    background-image: url(/images/v856-kul-07.jpg);
+    background-image: url(images/v856-kul-07.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height:100vh;
